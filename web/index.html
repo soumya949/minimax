@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniMax OpenBox Chat</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/static/app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="chat-pane">
+        <header class="chat-header">
+          <div class="chat-title">MiniMax + OpenBox</div>
+          <div class="chat-subtitle">Governed agent playground — text, audio &amp; video</div>
+          <nav class="mode-tabs" id="mode-tabs">
+            <button type="button" class="mode-tab active" data-mode="chat">Chat</button>
+            <button type="button" class="mode-tab" data-mode="audio">Audio</button>
+            <button type="button" class="mode-tab" data-mode="video">Video</button>
+          </nav>
+        </header>
+        <div class="chat-log" id="chat-log">
+          <div class="message assistant">
+            <div class="avatar">AI</div>
+            <div class="bubble" id="welcome-bubble">
+              Hey there! Ask me to inspect files, run code, or explain results.
+            </div>
+          </div>
+        </div>
+        <form class="chat-input" id="chat-form">
+          <textarea
+            id="chat-textarea"
+            rows="1"
+            placeholder="Type a request..."
+            autocomplete="off"
+            spellcheck="false"
+          ></textarea>
+          <button type="submit" aria-label="Send message">Send</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
